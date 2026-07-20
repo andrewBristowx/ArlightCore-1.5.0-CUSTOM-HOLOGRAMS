@@ -1,0 +1,31 @@
+# ================================
+# Configuracion de ArlightCore
+# ================================
+
+xp:
+  xp-per-win: 5          # XP que se da al ganar cualquier minijuego registrado
+  xp-per-level: 30       # cuanta XP hace falta para subir un nivel
+
+# Mundos donde se PUEDE reclamar una recompensa (para que no se pierda muriendo en un minijuego).
+claim-worlds:
+  - "survival"
+
+# Items entregados automaticamente a cada jugador al entrar al servidor (si no los tiene).
+give-items-on-join: true
+
+# Mundo al que regresan los jugadores descalificados por desconectarse o por
+# una partida interrumpida durante un reinicio del servidor.
+lobby-world: "legos"
+
+lobby:
+  # Desactivado: conectarse al servidor NO te envía automáticamente al lobby de minijuegos.
+  # Se puede entrar voluntariamente con /core lobby o mediante otro portal/plugin.
+  teleport-on-join: false
+  # Los jugadores normales no pueden construir. Los operadores y quienes tengan
+  # arlightcore.lobby.build sí pueden; WorldEdit y otros plugins siguen funcionando.
+  protect-blocks: true
+  # Altura a partir de la cual se considera que cayó al vacío.
+  void-rescue-y: -10.0
+  # Se configura dentro del juego con /core setlobby.
+  # Si todavía no existe, se usa el spawn normal del mundo indicado arriba.
+  spawn: {}
